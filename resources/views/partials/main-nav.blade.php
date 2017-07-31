@@ -1,8 +1,5 @@
-<li class="nav-docs"><a href="/docs">Documentation</a></li>
-<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
-<li class="nav-laravel-news"><a href="https://laravel-news.com">News</a></li>
-<li class="nav-partners"><a href="/partners">Partners</a></li>
-<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+<li class="nav-docs"><a href="/docs">Documentação Uniware</a></li>
+<li class="nav-docs"><a href="http://laravel.com/docs">Documentação Original</a></li>
 
 <li class="dropdown community-dropdown">
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ecosystem <span class="caret"></span></a>

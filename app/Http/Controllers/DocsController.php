@@ -53,12 +53,12 @@ class DocsController extends Controller
         }
 
         $sectionPage = $page ?: 'installation';
+        
         $content = $this->docs->get($version, $sectionPage);
-
-        if (is_null($content)) {
+	
+	    if (is_null($content)) {
             abort(404);
         }
-
         $title = (new Crawler($content))->filterXPath('//h1');
 
         $section = '';
@@ -76,7 +76,7 @@ class DocsController extends Controller
         }
 
         return view('docs', [
-            'title' => count($title) ? $title->text() : null,
+            'title' => count($title) ? utf8_decode( $title->text() ) : null,
             'index' => $this->docs->getIndex($version),
             'content' => $content,
             'currentVersion' => $version,

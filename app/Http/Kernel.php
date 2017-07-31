@@ -24,6 +24,7 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
+	        \Silber\PageCache\Middleware\CacheResponse::class,
             \App\Http\Middleware\CacheResponse::class,
             \App\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
@@ -33,4 +34,15 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
     ];
+	
+	/**
+	 * The application's route middleware.
+	 *
+	 * These middleware may be assigned to groups or used individually.
+	 *
+	 * @var array
+	 */
+	protected $routeMiddleware = [
+		'page-cache' => \Silber\PageCache\Middleware\CacheResponse::class,
+	];
 }

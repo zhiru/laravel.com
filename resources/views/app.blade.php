@@ -26,13 +26,12 @@
 
     <nav class="main">
         <a href="/" class="brand nav-block">
-            {!! svg('laravel-logo') !!}
-            <span>Laravel</span>
+            <span> Uniware </span>
         </a>
 
         <div class="search nav-block invisible">
             {!! svg('search') !!}
-            <input placeholder="search" type="text" v-model="search" id="search-input" v-on:blur="reset" />
+            <input placeholder="Buscar" type="text" v-model="search" id="search-input" v-on:blur="reset" />
         </div>
 
         <ul class="main-nav" v-if="! search">
@@ -74,13 +73,5 @@
     <script src="{{ elixir('assets/js/laravel.js') }}"></script>
     <script src="/assets/js/viewport-units-buggyfill.js"></script>
     <script>window.viewportUnitsBuggyfill.init();</script>
-    <script>
-        var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
-        (function(d,t){
-            var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)
-        }(document,'script'));
-    </script>
 </body>
 </html>

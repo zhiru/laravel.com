@@ -285,7 +285,7 @@ jQuery(function($) {
 
       // Only toggle the state if the user has collapsed the documentation
       if(docCollapsed) {
-        current.closest('ul').prev().toggleClass('is-active');
+//        current.closest('ul').prev().toggleClass('is-active');
       }
     }
   }

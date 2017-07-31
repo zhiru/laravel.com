@@ -167,6 +167,7 @@ return [
          * Package Service Providers...
          */
         Vinkla\Algolia\AlgoliaServiceProvider::class,
+	    Silber\PageCache\LaravelServiceProvider::class,
 
         /*
          * Application Service Providers...
