@@ -22,36 +22,39 @@
 	<div class="container">
 
         <div class="content">
-            <h1>Love beautiful code? We do too.</h1>
-            <p>The PHP Framework For Web Artisans</p>
+            <h1>Gosta de códigos bem feito? Nós também.</h1>
+            <p>O Framework em PHP para Artesões</p>
         </div>
 
         @include('partials/browser')
 
         <div class="macbook">
-<pre class="line-numbers"><code class="language-php">
+			<pre class="line-numbers">
+				<code class="language-php">
 &lt;?php
-
-
-class Idea extends Eloquent
-{
-
-	/**
-	 * Dreaming of something more?
-	 *
-	 * @with Laravel
-	 */
-	 public function create()
-	 {
-	 	// Have a fresh start...
-	 }
-
-}</code></pre>
+					
+					
+					class Idea extends Eloquent
+					{
+					
+						/**
+						 * Dreaming of something more?
+						 *
+						 * @with Laravel
+						 */
+						 public function create()
+						 {
+						    // Have a fresh start...
+						 }
+					
+					}
+				</code>
+			</pre>
             {!! svg('macbook') !!}
         </div>
 
         <div class="callout rule">
-            <span class="text">See What's New!</span>
+            <span class="text">Novidades!</span>
         </div>
 
         <div class="callouts">
@@ -60,21 +63,27 @@ class Idea extends Eloquent
                     <div class="callout-title">Laravel Scout</div>
                     <div class="callout-icon">{!! svg('scout')!!}</div>
                 </div>
-                <p>Driver based full-text search for Eloquent, complete with pagination and automatic indexing.</p>
+                <p>
+	                Pesquisa baseada no driver com texto completo para Eloquent, com paginação e indexação automática.
+                </p>
             </a>
             <a href="/docs/broadcasting" class="callout minimal third">
                 <div class="callout-head">
                     <div class="callout-title">Laravel Echo</div>
                     <div class="callout-icon">{!! svg('echo')!!}</div>
                 </div>
-                <p>Event broadcasting, evolved. Bring the power of WebSockets to your application without the complexity.</p>
+                <p>
+	                Transmissão de eventos, evoluiu. Aproveite o poder dos WebSockets para sua aplicação sem a complexidade.
+                </p>
             </a>
             <a href="/docs/passport" class="callout minimal third">
                 <div class="callout-head">
                     <div class="callout-title">Laravel Passport</div>
                     <div class="callout-icon">{!! svg('passport')!!}</div>
                 </div>
-                <p>API authentication without the headache. Passport is an OAuth2 server that's ready in minutes.</p>
+                <p>
+	                Autenticação de API sem a dor de cabeça. O passaporte é um servidor OAuth2 pronto em minutos.
+                </p>
             </a>
         </div>
 	</div>
@@ -88,13 +97,15 @@ class Idea extends Eloquent
 </section> --}}
 
 <section class="panel features dark" id="features">
-	<h1>Did someone say rapid?</h1>
-	<p class="intro">Elegant applications delivered at warp speed.</p>
+	<h1>Alguém disse rápido?</h1>
+	<p class="intro">Aplicações elegantes entregues à velocidade da urdidura.</p>
 		<div class="blocks stacked">
 			<div class="block odd">
 				<div class="text">
-					<h2>Expressive, beautiful syntax.</h2>
-					<p>Value elegance, simplicity, and readability? You’ll fit right in. Laravel is designed for people just like you. If you need help getting started, check out <a href="https://laracasts.com">Laracasts</a> and our <a href="/docs">great documentation</a>.</p>
+					<h2>Sintaxe expressiva e bonita.</h2>
+					<p>
+						Valoriza a elegância, a simplicidade e a legibilidade? Você vai encaixar-se. O Laravel é projetado para pessoas como você. Se você precisar de ajuda para começar, confira os <a href="https://laracasts.com">Laracasts</a> e/ou nossa <a href="/docs">Documentação</a>.
+					</p>
 				</div>
 				<div class="media">
 
@@ -129,8 +140,11 @@ class Purchase implements ShouldQueue
 			</div><!-- /.block -->
 			<div class="block even">
 				<div class="text">
-					<h2>Tailored for your team.</h2>
-					<p>Whether you're a solo developer or a 20 person team, Laravel is a breath of fresh air. Keep everyone in sync using Laravel's database agnostic <a href="/docs/migrations">migrations</a> and <a href="/docs/migrations">schema builder</a>.</p>
+					<h2>Adaptado para o seu time.</h2>
+					<p>
+						Se você é um desenvolvedor solo ou uma está em uma equipe de 20 ou + pessoas, Laravel é um sopro de ar fresco.
+						Mantenha todos sincronizados usando a base de dados Agnóstica do Laravel <a href="/docs/migrations">Migrações</a> e o <a href="/docs/migrations">Construtor de esquemas</a>.
+					</p>
 				</div>
 				<div class="media">
 					<div class="terminal-window">
@@ -153,8 +167,12 @@ Migrated: 2015_01_13_162508_create_servers_table
 			</div><!-- /.block -->
 			<div class="block odd">
 				<div class="text">
-					<h2>Modern toolkit. Pinch of magic.</h2>
-					<p>An <a href="/docs/eloquent">amazing ORM</a>, painless <a href="/docs/routing">routing</a>, powerful <a href="/docs/queues">queue library</a>, and <a href="/docs/authentication">simple authentication</a> give you the tools you need for modern, maintainable PHP. We sweat the small stuff to help you deliver amazing applications.
+					<h2>Kit de ferramentas moderno. Pitada de magia.</h2>
+					<p>
+						Uma <a href="/docs/eloquent">maravilhosa ORM</a>, <a href="/docs/routing">Rotas</a> sem dor/pânico, poderosas <a href="/docs/queues">biblioteca de fila</a>,
+						e sistema de <a href="/docs/authentication">autenticação simples</a>, que lhe dão ferramentas que você precisa para, modernizar e manter o PHP.
+						Nós criamos pequenas coisas para ajudar você a desenvolver aplicações maravilhosas.
+					</p>
 				</div>
 				<div class="media">
 
