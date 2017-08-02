@@ -31,3 +31,8 @@ Após finalizado o passo 2, execute o comando `gulp`.
 ### Observações
 
 Caso não exista um vhost para este projeto é melhor criar para facilitar no acesso.
+
+### **Importante**
+
+Colocar permissão de escrita na pasta storage/ e public/ que encontra-se na raiz do projeto.
+Criar pasta page-cache dentro da pasta public/ (public/page-cache) **com permissões de escrita**

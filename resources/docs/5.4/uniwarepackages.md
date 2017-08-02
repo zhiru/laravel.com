@@ -545,33 +545,17 @@ If you use a massive amount of assets make sure your connection is fast enough a
 Sim você pode, mas não há motivos para o mesmo. talvez seja melhor usar [multitenancy](#stolz-assets-multitenancy) (*Disponível apenas para Laravel> = 5.0*). 
 Yes you can but there is no need. You better use the 
 
-<a id="faq_instances"></a>
-### Can I change settings on the fly?
+<a id="stolz-assets-faq_instances"></a>
+#### Posso alterar as configurações me tempo de execução (on the fly)?
 
-Yes you can. There is a `config()` public method to change settings on the fly. This allows you to use same instance of the library with different settings. i.e:
+Sim você pode. Existe um método publica chamado `config()`. Isto permite que você use a mesma instancia da biblioteca, mas para configurações diferentes:
 
 	echo Assets::add('jquery-cdn')->js();
 	echo Assets::reset()->add(['custom.js', 'main.js'])->config(['pipeline' => true])->js();
 
-If you want the different settings to be permanent, then use the [multitenancy feature](#multitenancy).
+Se você deseja que suas configurações diferentes sejam permanentes, use então o [multitenancy](#stolz-assets-multitenancy).
 
-<a id="faq_filter"></a>
-### Can I filter/preprocess my assets?
+<a id="stolz-assets-faq_filter"></a>
+#### Posso filtrar ou usar pré-processadores nos meus assets?
 
-The library does not include any built in filter/preprocessor functionality but it offers a way to provide your custom one when pipeline is enabled. Simply use the [fetch_command](https://github.com/Stolz/Assets/blob/master/API.md#fetch_command) config option to apply a custom [filter](https://github.com/Stolz/Assets/issues/23).
-
-<a id="faq_to_help"></a>
-### How can I contribute?
-
-Send a pull requests to the **develop** branch. Read next question for your PR to have more chances to be accepted.
-
-<a id="faq_pull_request_not_merged"></a>
-### Why my pull requests was not accepted?
-
-Remember, the main reason for the library to exist is to be easy to use. If your PR involves changing this and makes the library cumbersome to use then it will not be accepted.
-
-This is a framework agnostic library, if your PR uses code related to your framework it will not be accepted.
-
-If your contribution adds new features make sure to include a proper PHPUnit test for it.
-
-Please use PHP_CodeSniffer to make sure your code follows the project coding standards (which is a slightly variation of [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)).
+A Biblioteca não inclui nenhum pacote de funcionalidade de filtros/pré-processadores, mas oferece um meio para o caso de ser customziado quando o pipeline estiver ativado. Simplismente use a configuração [fetch_command](https://github.com/Stolz/Assets/blob/master/API.md#fetch_command) para aplicar um filtro customizado [filter](https://github.com/Stolz/Assets/issues/23).
