@@ -442,8 +442,7 @@ Atente-se o método `group()` faz parte da Facade, ou seja, não aceita encadeia
 <a id="stolz-assets-naoestatica"></a>
 ### Interface não estática
 
-Você pode usar a biblioteca sem usar métodos estáticos. A assinatura de todos os métodos é a mesma descrita acima, 
-mas usando o instanciamento da classe ao invés:
+Você pode usar a biblioteca sem usar métodos estáticos. A assinatura de todos os métodos é a mesma descrita acima, mas usando o instanciamento da classe ao invés:
 
 	// Carrega a biblioteca com o composer
 	require __DIR__ . '/vendor/autoload.php';
@@ -531,28 +530,20 @@ Então eles devem ser carregadas no seu assets como:
 <a id="stolz-assets-faq_base"></a>
 #### Por que meus assets funcionam na página principal mas não nas páginas internas?
 
-Se seus assets funcionando por exemplo para a url <http://example.com> mas não para <http://example.com/some/other/place> 
+Se seus assets funcionando por exemplo para a url <http://example.com> mas não para <http://example.com/some/other/place> você provavelmente está usando links relativos. Se você está usando links relativos para sua URI raiz você terá que usar a tag [`<base>`](http://www.w3.org/TR/html4/struct/links.html#h-12.4), apontando para sua URI raiz. Esse comportamento não é relacionado a biblioteca ou ao framework, mas ao [pardão do HTML](http://www.w3.org/TR/html401/struct/links.html#h-12.4.1). Por favor tenha certeza que você entende sobre [a semantica dos links relativos](http://tools.ietf.org/html/rfc3986#section-4) antes de reportar um bug.
 
+<a id="stolz-assets-faq_pipeline"></a>
+#### O pipeline não está funcionando
 
-If your assets seem to work fine for <http://example.com> but not for <http://example.com/some/other/place> 
-your are likely to be using relative links. 
-If you use links relative to your root URI in an URI that is not your root URI for 
-them to work you must use the [`<base>` HTML tag](http://www.w3.org/TR/html4/struct/links.html#h-12.4) 
-pointing to your root URI. This behavior is not related to the library or 
-the framework but related to the [HTML standard](http://www.w3.org/TR/html401/struct/links.html#h-12.4.1) itself. 
-Please make sure you understand the [semantics of relative links](http://tools.ietf.org/html/rfc3986#section-4) before reporting a bug.
-
-<a id="faq_pipeline"></a>
-### The pipeline is not working
-
-Make sure `public_dir` config option is set and it's pointing to the **absolute** path of your webroot/public folder and the user that is running the library has write permissions for that folder.
+Tenha certeza que sua opção `public_dir` na configuração esteja apontando para o caminho **absoluto** baseado na pasta "raiz"/public e que o usuário que vai executar a biblioteca tenha permissões de escrita para esta pasta.
 
 If you use a massive amount of assets make sure your connection is fast enough and your computer is powerful enough to download and compress all the assets before the PHP maximum execution time is reached.
 
-<a id="faq_config_on_the_fly"></a>
-### Can I use multiple instances of the library?
+<a id="stolz-assets-faq_config_on_the_fly"></a>
+#### Posso usar várias instancias da biblioteca?
 
-Yes you can but there is no need. You better use the [multitenancy feature](#multitenancy) (*only available for Laravel >= 5.0*).
+Sim você pode, mas não há motivos para o mesmo. talvez seja melhor usar [multitenancy](#stolz-assets-multitenancy) (*Disponível apenas para Laravel> = 5.0*). 
+Yes you can but there is no need. You better use the 
 
 <a id="faq_instances"></a>
 ### Can I change settings on the fly?
