@@ -11,3 +11,23 @@ The website's documentation is loaded from the `resources/docs` directory. You w
 ### Additional Information
 
 Projeto com traduções da versão 5.4 do Laravel e alguns dos pacotes usados no projetos da Uniware
+
+
+### Passos iniciais
+
+#### Passo 1
+
+Após clonar o projeto execute os seguintes comandos `composer install` enquanto o comando vai sendo executado você pode,
+renomear o arquivo `.env.example` para `.env`, existe algumas pré-configurações que é bom ver neste arquivo.
+
+#### Passo 2
+
+Após finalizado o passo 1, execute o comando `npm install`.
+
+#### Passo 3
+
+Após finalizado o passo 2, execute o comando `gulp`.
+
+### Observações
+
+Caso não exista um vhost para este projeto é melhor criar para facilitar no acesso.
