@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::get('docs', 'DocsController@showRootPage');
 Route::get('docs/{version}/{page?}', 'DocsController@show');
+Route::get('docs/{version}/pacotes/{page?}', 'DocsController@showpacotes');
 
 Route::get('partners', function () {
     return view('partners');

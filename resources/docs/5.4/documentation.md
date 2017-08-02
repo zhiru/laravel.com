@@ -5,7 +5,7 @@
     - [Documetnação da API](/api/{{version}})
 - ## Começando {.is-active}
     - [Instalação](/docs/{{version}}/installation)
-    - [Instalação Pacotes Uniware](/docs/{{version}}/uniwarepackages)
+    - [Instalação Pacotes](/docs/{{version}}/pacotes)
     - [Configuração](/docs/{{version}}/configuration)
     - [Estrutura de Diretórios](/docs/{{version}}/structure)
     - [Homestead](/docs/{{version}}/homestead)

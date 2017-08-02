@@ -87,6 +87,57 @@ class DocsController extends Controller
     }
 
     /**
+     * Show a documentation page.
+     *
+     * @param  string $version
+     * @param  string|null $page
+     * @return Response
+     */
+    public function showpacotes($version, $page = null)
+    {
+        if (! $this->isVersion($version)) {
+            return redirect('docs/'.DEFAULT_VERSION.'/'.$version, 301);
+        }
+
+        if (! defined('CURRENT_VERSION')) {
+            define('CURRENT_VERSION', $version);
+        }
+
+        $sectionPage = $page ?: 'installation';
+        
+        $content = $this->docs->get($version, 'pacotes/'.$sectionPage);
+	
+	    if (is_null($content)) {
+            abort(404);
+        }
+        $title = (new Crawler($content))->filterXPath('//h1');
+
+        $section = '';
+        
+        if ($this->docs->sectionExists($version, 'pacotes/'.$page)) {
+            $section .= '/pacotes/'.$page;
+        } elseif (! is_null($page)) {
+            return redirect('/docs/'.$version);
+        }
+
+        $canonical = null;
+
+        if ($this->docs->sectionExists(DEFAULT_VERSION, $sectionPage)) {
+            $canonical = 'docs/'.DEFAULT_VERSION.'/pacotes/'.$sectionPage;
+        }
+
+        return view('docs', [
+            'title' => count($title) ? utf8_decode( $title->text() ) : null,
+            'index' => $this->docs->getIndex($version),
+            'content' => $content,
+            'currentVersion' => $version,
+            'versions' => Documentation::getDocVersions(),
+            'currentSection' => $section,
+            'canonical' => $canonical,
+        ]);
+    }
+
+    /**
      * Determine if the given URL segment is a valid version.
      *
      * @param  string  $version
