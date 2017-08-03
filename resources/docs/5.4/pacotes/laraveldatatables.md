@@ -8,7 +8,7 @@
     - [Kodeine Laravel Acl](/docs/{{version}}/pacotes/laravelacl)
     - [Faker](/docs/{{version}}/pacotes/faker)
     - [Laravel DataTables](/docs/{{version}}/pacotes/laraveldatatables)
-    - [Intervention Image](#intervention-image)
+    - [Intervention Image](/docs/{{version}}/pacotes/interventionimage)
 
 <a name="laravel-acl"></a>
 ## Instalação Laravel ACL
